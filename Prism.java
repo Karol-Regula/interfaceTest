@@ -1,9 +1,9 @@
-public class Prism extends Rectangle{
+public class Prism extends Rectangle implements Volume{
 
     private double height;
 
     public Prism(double length, double width, double height, String name){
-	super(lenght,width,name);
+	super(length,width,name);
 	this.height = height;
     }
 
@@ -12,6 +12,11 @@ public class Prism extends Rectangle{
     }
 
     public String toString(){
-	return "FIXME!";
+	return "Prism "+getName()+" that is "+getLength()+" by "+getWidth()+" by "+getHeight();
+
+    }
+
+    public double getVolume(){
+	return getArea() * getHeight();
     }
 }
